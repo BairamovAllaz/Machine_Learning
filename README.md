@@ -1,0 +1,1 @@
+Resources : https://beaulucas.github.io/tidy_islr/linear-regression.html
