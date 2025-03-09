@@ -75,7 +75,19 @@ if t_beta_1 > t_critical:
 else:
     print("Not enough realtion between X and Y");
 
-# In[13]:
+SS_res = np.sum((Y - Y_prediction) ** 2);
+SS_tot = np.sum((Y - mean_Y) ** 2);
+
+R_two = 1 - (SS_res / SS_tot);
+print("R^2 Score:", R_two)
+
+
+if R_two == 1:
+    print("Perfect fit, predictions match the data exactly");
+elif R_two == 0:
+    print("The model is no better than predicting the mean of the target variable")
+else:
+    print("The model is worse than predicting the mean, meaning it performs poorly.");
 
 #Ploting data points
 
